@@ -69,12 +69,7 @@ class ReactAgent:
         tools_dict (dict): A dictionary mapping tool names to their corresponding Tool instances.
     """
 
-    def __init__(
-        self,
-        tools: Tool | list[Tool],
-        model: str = "llama-3.3-70b-versatile",
-        system_prompt: str = BASE_SYSTEM_PROMPT,
-    ) -> None:
+    def __init__(self,tools: Tool | list[Tool],model: str = "llama-3.3-70b-versatile",system_prompt: str = BASE_SYSTEM_PROMPT,) -> None:
         self.client = Groq()
         self.model = model
         self.system_prompt = system_prompt
